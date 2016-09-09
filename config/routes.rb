@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   get '/about' => 'pages#about'
   root 'pages#home' 
   # home page that looks at pages controller and executes home action.
