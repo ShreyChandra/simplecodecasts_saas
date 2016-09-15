@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h1 class="text-center">Dev Match Community</h1>
+        <p class="text-center">Welcome to the Dev Match Community. Users must fill out a profile in order to be visible in the community.</p>
+        <ul class="list-unstyled">
+            <% @users.each do |user| %>
+                <% if user.profile %>
+                    <li>
+                        <div class="row users-list-well">
+                            <div class="col-sm-3 text-center">
+                                <% if user.profile.avatar %>
+                                    <%= link_to user do %>
+                                        <%= image_tag user.profile.avatar.url(:thumb), class: 'round-avatar' %>
+                                    <% end %>
+                                <% end %>
+                            </div>
+                            <div class="well col-sm-9 <%= cycle('white-bg', '') %>">
+                                <%= link_to user do %>
+                                    <h2 class= "index-user-info"><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
+                                <% end %>
+                                <h4><%= user.profile.job_title %> 
+                                <% if user.plan_id == 2 %>
+                                    <span class="label label-danger">PRO</span>
+                                <% end %>
+                                </h4>
+                            </div>
+                        </div>
+                        
+                    </li>
+                <% end %>
+            <% end %>
+        </ul>
+        
+    </div>
+</div>

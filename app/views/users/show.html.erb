@@ -1,7 +1,7 @@
 <div class"row" style="color:white">
     <div class="col-md-3 text-center profile-pic">
        <img> 
-       <%= image_tag @user.profile.avatar.url %>  
+       <%= image_tag @user.profile.avatar.url, class: 'user-show-avatar' %>  
         </img>
     </div>
     <div class="col-md-6">
@@ -13,7 +13,7 @@
             <%= @user.profile.description %>
         </div>
         
-        <% if true#current_user.plan_id == 2 %>
+        <% if current_user.plan_id == 2 %>
           <div class="well profile-block contact-info">  
           <h4>Contact info</h4>
             <%= @user.profile.phone_number %></br>
