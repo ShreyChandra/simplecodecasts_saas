@@ -4,6 +4,8 @@ class PagesController < ApplicationController
         rescue ActiveRecord::RecordNotFound => e
         @basic_plan = nil
         @pro_plan = Plan.find(2)
+        rescue ActiveRecord::RecordNotFound => e
+        @pro_plan = nil
     end
     
     
