@@ -5,16 +5,35 @@
 @import "font-awesome";
 
 body {
+    background:white;
+    background: #2C3E50; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2C3E50 , #FD746C); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C3E50 , #FD746C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
+}
+.navbar{
+    .navbar-brand{
+        color:white;
+    }
     
-
-background: #606c88; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #606c88 , #3f4c6b); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #606c88 , #3f4c6b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    .navbar-collapse ul > li > a{
+        color:white;
+    }
+    padding-top:5px;
+    border:none;
+    background: #2C3E50; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2C3E50 , #FD746C); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C3E50 , #FD746C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         
 }
 
 .jumbotron{
-    background:#d1d1e0;
+    background:#333;
+    opacity:0.8;
+    h3, h1{
+        color:white;
+    }
+    
 }
 
 .alert-notice {
@@ -22,3 +41,7 @@ background: linear-gradient(to left, #606c88 , #3f4c6b); /* W3C, IE 10+/ Edge, F
     background-color: #fcf8e3;
     border-color: #faebcc;
 }
+
+.jumbotron > .prof > h4{
+        padding-top:20px !important;
+    }
